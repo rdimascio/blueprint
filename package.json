@@ -12,7 +12,8 @@
     "lint:fix": "xo --fix",
     "test": "ava",
     "cover": "nyc npm run test",
-    "build": "babel --plugins '@babel/plugin-transform-modules-umd' src --out-file ./dist/index.js --no-comments"
+    "cover:report": "nyc report --reporter=text-lcov | coveralls",
+    "build": "babel --plugins '@babel/plugin-transform-modules-umd' src/index.js --out-file ./dist/index.js --no-comments --source-maps"
   },
   "browserslist": [
     "> 1%",
